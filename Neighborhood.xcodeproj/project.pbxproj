@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		627A03A321599BE90072A991 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A03A221599BE90072A991 /* EventsVC.swift */; };
+		627A03A92159A0720072A991 /* MyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A03A82159A0720072A991 /* MyEventCell.swift */; };
 		B41AEC7C215945A60051E926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC7B215945A60051E926 /* AppDelegate.swift */; };
 		B41AEC7E215945A60051E926 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC7D215945A60051E926 /* LoginViewController.swift */; };
 		B41AEC81215945A60051E926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41AEC7F215945A60051E926 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		627A03A221599BE90072A991 /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
+		627A03A82159A0720072A991 /* MyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventCell.swift; sourceTree = "<group>"; };
 		B41AEC78215945A60051E926 /* Neighborhood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neighborhood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41AEC7B215945A60051E926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B41AEC7D215945A60051E926 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				B41AEC7B215945A60051E926 /* AppDelegate.swift */,
 				B41AEC7D215945A60051E926 /* LoginViewController.swift */,
 				B41AEC7F215945A60051E926 /* Main.storyboard */,
+				627A03A221599BE90072A991 /* EventsVC.swift */,
+				627A03A82159A0720072A991 /* MyEventCell.swift */,
 				B41AEC9021598AE20051E926 /* RegisterViewController.swift */,
 				B41AEC85215945A80051E926 /* Assets.xcassets */,
 				B41AEC87215945A80051E926 /* LaunchScreen.storyboard */,
@@ -141,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627A03A92159A0720072A991 /* MyEventCell.swift in Sources */,
 				B41AEC7E215945A60051E926 /* LoginViewController.swift in Sources */,
+				627A03A321599BE90072A991 /* EventsVC.swift in Sources */,
 				B41AEC7C215945A60051E926 /* AppDelegate.swift in Sources */,
 				B41AEC84215945A60051E926 /* Neighborhood.xcdatamodeld in Sources */,
 				B41AEC9121598AE20051E926 /* RegisterViewController.swift in Sources */,
