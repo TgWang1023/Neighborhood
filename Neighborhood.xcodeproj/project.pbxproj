@@ -14,6 +14,7 @@
 		B41AEC86215945A80051E926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41AEC85215945A80051E926 /* Assets.xcassets */; };
 		B41AEC89215945A80051E926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41AEC87215945A80051E926 /* LaunchScreen.storyboard */; };
 		B41AEC9121598AE20051E926 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC9021598AE20051E926 /* RegisterViewController.swift */; };
+		B41AEC9321599B910051E926 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC9221599B910051E926 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B41AEC88215945A80051E926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B41AEC8A215945A80051E926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B41AEC9021598AE20051E926 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B41AEC9221599B910051E926 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				B41AEC7B215945A60051E926 /* AppDelegate.swift */,
 				B41AEC7D215945A60051E926 /* LoginViewController.swift */,
 				B41AEC7F215945A60051E926 /* Main.storyboard */,
+				B41AEC9221599B910051E926 /* ShareViewController.swift */,
 				B41AEC9021598AE20051E926 /* RegisterViewController.swift */,
 				B41AEC85215945A80051E926 /* Assets.xcassets */,
 				B41AEC87215945A80051E926 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				B41AEC7E215945A60051E926 /* LoginViewController.swift in Sources */,
 				B41AEC7C215945A60051E926 /* AppDelegate.swift in Sources */,
+				B41AEC9321599B910051E926 /* ShareViewController.swift in Sources */,
 				B41AEC84215945A60051E926 /* Neighborhood.xcdatamodeld in Sources */,
 				B41AEC9121598AE20051E926 /* RegisterViewController.swift in Sources */,
 			);
