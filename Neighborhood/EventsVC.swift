@@ -11,10 +11,17 @@ import UIKit
 class EventsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func addButtonPressed(_ sender: UIButton) {
+        print("Add event")
+        tableView.isHidden = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.isHidden = false
     }
 }
 

@@ -264,10 +264,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWh-se-Qou">
+                                <rect key="frame" x="337" y="401" width="22" height="22"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="Vaf-t3-fVy" eventType="touchUpInside" id="G9y-vA-Cxb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YAf-Gn-7oT" firstAttribute="top" secondItem="Q4C-Sl-AJC" secondAttribute="top" id="3AA-lp-evr"/>
+                            <constraint firstItem="AHw-hO-y2c" firstAttribute="top" secondItem="NWh-se-Qou" secondAttribute="top" constant="-1" id="Azd-MN-Kv3"/>
                             <constraint firstItem="AHw-hO-y2c" firstAttribute="leading" secondItem="Q4C-Sl-AJC" secondAttribute="leadingMargin" id="LRq-jw-Kb8"/>
                             <constraint firstItem="AHw-hO-y2c" firstAttribute="top" secondItem="YAf-Gn-7oT" secondAttribute="bottom" constant="20" id="Pef-aA-m2U"/>
                             <constraint firstItem="YAf-Gn-7oT" firstAttribute="leading" secondItem="Q4C-Sl-AJC" secondAttribute="leading" id="Rkq-dN-WNO"/>
@@ -276,6 +283,7 @@
                             <constraint firstItem="Rrt-gF-CHZ" firstAttribute="leading" secondItem="bJC-1q-LcT" secondAttribute="leading" id="k4p-vd-zSU"/>
                             <constraint firstItem="Rrt-gF-CHZ" firstAttribute="trailing" secondItem="bJC-1q-LcT" secondAttribute="trailing" id="lHf-2M-KOB"/>
                             <constraint firstAttribute="trailing" secondItem="YAf-Gn-7oT" secondAttribute="trailing" id="msm-5c-xva"/>
+                            <constraint firstItem="bJC-1q-LcT" firstAttribute="trailing" secondItem="NWh-se-Qou" secondAttribute="trailing" constant="16" id="o1q-gb-CRg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bJC-1q-LcT"/>
                     </view>
@@ -286,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVy-tg-KFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680.8" y="877.51124437781118"/>
+            <point key="canvasLocation" x="2180" y="878"/>
         </scene>
         <!--Item-->
         <scene sceneID="4bY-5b-ILq">
