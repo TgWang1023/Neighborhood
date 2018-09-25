@@ -10,10 +10,34 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var repeatPasswordTextField: UITextField!
+    
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        if passwordTextField.text! == repeatPasswordTextField.text! {
+            print(passwordTextField.text!)
+            UserModel.addNewUser(newUser: ["username": usernameTextField.text!, "password_hs": passwordTextField.text!], completionHandler: {
+                data, response, error in
+                do {
+                    print("Adding new user...")
+                    if let newUser = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+                        print("added: ", newUser)
+                    }
+                } catch {
+                    print("Error in RegisterVC, adding new user.")
+                }
+            })
+        } else {
+            print("Passwords do not match")
+            // do something
+        }
+        
+    }
 
-        // Do any additional setup after loading the view.
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
     }
     
     @IBAction func registerSegue(_ sender: UIButton) {

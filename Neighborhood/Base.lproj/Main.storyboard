@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -142,18 +143,19 @@
                                 <rect key="frame" x="163" y="183" width="162" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1h-VI-XJf">
                                 <rect key="frame" x="163" y="237" width="162" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEc-Ew-Vz8">
                                 <rect key="frame" x="159" y="297" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
+                                    <action selector="registerButtonPressed:" destination="hHV-9k-oUe" eventType="touchUpInside" id="fAx-dp-aSk"/>
                                     <action selector="registerSegue:" destination="hHV-9k-oUe" eventType="touchUpInside" id="8gm-v7-KLX"/>
                                 </connections>
                             </button>
@@ -191,6 +193,9 @@
                         <viewLayoutGuide key="safeArea" id="Kkx-Nb-oLI"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTextField" destination="ddj-C3-Qh8" id="oN9-66-kGb"/>
+                        <outlet property="repeatPasswordTextField" destination="v1h-VI-XJf" id="ooV-dE-iPg"/>
+                        <outlet property="usernameTextField" destination="WyL-kF-dWF" id="Xte-k7-KYF"/>
                         <segue destination="cmN-da-bGn" kind="show" identifier="RegisterSegue" id="hu8-PL-RNr"/>
                     </connections>
                 </viewController>
@@ -284,6 +289,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cmN-da-bGn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oYb-MR-hna">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
