@@ -10,18 +10,22 @@ import UIKit
 
 class AddEditVC: UIViewController {
 
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBAction func addPressed(_ sender: UIButton) {
         print("Add button pressed")
+        print(titleTextField.text)
+        print(locationTextField.text)
+        print(datePicker.date)
         dismiss(animated: true, completion: nil)
     }
     @IBAction func cancelPressed(_ sender: UIButton) {
-        print("Cancel Pressed")
+        print("Cancel button pressed")
         dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
