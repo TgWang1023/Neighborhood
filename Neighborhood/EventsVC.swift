@@ -13,15 +13,12 @@ class EventsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBAction func addButtonPressed(_ sender: UIButton) {
         print("Add event")
-        tableView.isHidden = true
+        performSegue(withIdentifier: "AddEditEventSegue", sender: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.isHidden = false
     }
 }
 
@@ -34,4 +31,19 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource{
         cell.eventTitleLabel.text = "Event - \(indexPath.row + 1)"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
+            
+            // code for delete
+        }
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, handler) in
+            
+            // code for edit
+        }
+        delete.backgroundColor = .red
+        edit.backgroundColor = .blue
+        return UISwipeActionsConfiguration(actions: [delete,edit])
+    }
+    
 }

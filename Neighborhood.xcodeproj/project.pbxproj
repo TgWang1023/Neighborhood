@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62136C83215AAB070023A30D /* AddEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62136C82215AAB070023A30D /* AddEditVC.swift */; };
 		627A03A321599BE90072A991 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A03A221599BE90072A991 /* EventsVC.swift */; };
 		627A03A92159A0720072A991 /* MyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A03A82159A0720072A991 /* MyEventCell.swift */; };
 		B41AEC7C215945A60051E926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC7B215945A60051E926 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62136C82215AAB070023A30D /* AddEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditVC.swift; sourceTree = "<group>"; };
 		627A03A221599BE90072A991 /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
 		627A03A82159A0720072A991 /* MyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventCell.swift; sourceTree = "<group>"; };
 		B41AEC78215945A60051E926 /* Neighborhood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neighborhood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 			children = (
 				B41AEC7B215945A60051E926 /* AppDelegate.swift */,
 				B41AEC7D215945A60051E926 /* LoginViewController.swift */,
+				62136C82215AAB070023A30D /* AddEditVC.swift */,
 				B41AEC7F215945A60051E926 /* Main.storyboard */,
 				627A03A221599BE90072A991 /* EventsVC.swift */,
 				627A03A82159A0720072A991 /* MyEventCell.swift */,
@@ -153,6 +156,7 @@
 				B41AEC7C215945A60051E926 /* AppDelegate.swift in Sources */,
 				B41AEC84215945A60051E926 /* Neighborhood.xcdatamodeld in Sources */,
 				B41AEC9121598AE20051E926 /* RegisterViewController.swift in Sources */,
+				62136C83215AAB070023A30D /* AddEditVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
