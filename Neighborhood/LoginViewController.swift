@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 class LoginViewController: UIViewController {
 
+    let locationManager = CLLocationManager()
+    
     @IBOutlet weak var usernameTextLabel: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginErrorLabel: UILabel!
@@ -30,6 +33,13 @@ class LoginViewController: UIViewController {
                                 self.loginErrorLabel.text = user["error"]! as? String
                                 self.loginErrorLabel.isHidden = false
                             } else {
+                                print(user)
+                                LoggedInUser.shared.id = (user["_id"]! as? String)!
+                                LoggedInUser.shared.username = (user["username"]! as? String)!
+                                LoggedInUser.shared.contact = (user["contact"]! as? String)!
+                                LoggedInUser.shared.address = (user["address"]! as? String)!
+                                LoggedInUser.shared.latitude = (user["latitude"]! as? String)!
+                                LoggedInUser.shared.longitude = (user["longitude"]! as? String)!
                                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)
                             }
                         }
