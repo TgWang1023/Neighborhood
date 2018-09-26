@@ -23,15 +23,29 @@ class UserModel {
                             "pass_hs": newUser["password_hs"]!,
                             "address": newUser["address"],
                             "contact": newUser["contact"]]
-            print("got bodyData: ", bodyData)
             do {
-                print("got here")
                 request.httpBody = try JSONSerialization.data(withJSONObject: bodyData)
             } catch {
                 print("error in UserModel, addNewUser().")
             }
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.setValue("application/json", forHTTPHeaderField: "Accept")
+            let session = URLSession.shared
+            let user = session.dataTask(with: request as URLRequest, completionHandler: completionHandler)
+            user.resume()
+        }
+    }
+    static func loginUser(findUser: [String: String], completionHandler:@escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+        if let urlToReq = URL(string: "http://localhost:8000/users/login") {
+            var request = URLRequest(url: urlToReq)
+            request.httpMethod = "POST"
+            let bodyData = ["username": findUser["username"]!,
+                            "pass": findUser["pass"]!]
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: bodyData)
+            } catch {
+                print("error in UserModel, loginUser().")
+            }
             let session = URLSession.shared
             let user = session.dataTask(with: request as URLRequest, completionHandler: completionHandler)
             user.resume()

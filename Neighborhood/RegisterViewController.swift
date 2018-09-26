@@ -40,7 +40,7 @@ class RegisterViewController: UIViewController {
                         }
                     }
                 } catch {
-                    print("something went wrong")
+                    print("Error registering from RegisterVC.")
                 }
             })
         }
