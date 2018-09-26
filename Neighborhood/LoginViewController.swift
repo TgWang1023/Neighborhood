@@ -38,8 +38,6 @@ class LoginViewController: UIViewController {
                                 LoggedInUser.shared.username = (user["username"]! as? String)!
                                 LoggedInUser.shared.contact = (user["contact"]! as? String)!
                                 LoggedInUser.shared.address = (user["address"]! as? String)!
-                                LoggedInUser.shared.latitude = (user["latitude"]! as? String)!
-                                LoggedInUser.shared.longitude = (user["longitude"]! as? String)!
                                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)
                             }
                         }

@@ -16,13 +16,17 @@ class UserModel {
         user.resume()
     }
     static func addNewUser(newUser: [String:String], completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://13.56.81.225/users") {
+        if let urlToReq = URL(string: "http://localhost:8000/users") {
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "POST"
             let bodyData = ["username": newUser["username"]!,
                             "pass_hs": newUser["password_hs"]!,
-                            "address": newUser["address"],
-                            "contact": newUser["contact"]]
+                            "address": newUser["address"]!,
+                            "contact": newUser["contact"]!,
+                            "longitude": LoggedInUser.shared.longitude,
+                            "latitude": LoggedInUser.shared.latitude
+                            ]
+            print("from UserModel:", bodyData)
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: bodyData)
             } catch {
