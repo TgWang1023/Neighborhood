@@ -46,6 +46,11 @@ class RegisterViewController: UIViewController {
         }
     }
 
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         registrationErrorLabel.isHidden = true
         super.viewDidLoad()
