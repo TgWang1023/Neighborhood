@@ -20,7 +20,9 @@ class UserModel {
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "POST"
             let bodyData = ["username": newUser["username"]!,
-                            "pass_hs": newUser["password_hs"]!]
+                            "pass_hs": newUser["password_hs"]!,
+                            "address": newUser["address"],
+                            "contact": newUser["contact"]]
             print("got bodyData: ", bodyData)
             do {
                 print("got here")
