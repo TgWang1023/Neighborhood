@@ -20,9 +20,10 @@ class UserModel {
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "POST"
             let bodyData = ["username": newUser["username"]!,
-                            "pass_hs": newUser["password_hs"]]
+                            "pass_hs": newUser["password_hs"]!]
             print("got bodyData: ", bodyData)
             do {
+                print("got here")
                 request.httpBody = try JSONSerialization.data(withJSONObject: bodyData)
             } catch {
                 print("error in UserModel, addNewUser().")
