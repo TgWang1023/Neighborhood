@@ -25,9 +25,13 @@ class LoginViewController: UIViewController {
                 do {
                     print("logging in...")
                     if let user = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                        print("logged in: ", user)
                         DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+                            if let _ = user["error"]{
+                                self.loginErrorLabel.text = user["error"]! as? String
+                                self.loginErrorLabel.isHidden = false
+                            } else {
+                                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+                            }
                         }
                     }
                     

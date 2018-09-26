@@ -41,11 +41,14 @@ class UserModel {
             request.httpMethod = "POST"
             let bodyData = ["username": findUser["username"]!,
                             "pass": findUser["pass"]!]
+            print(bodyData)
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: bodyData)
             } catch {
                 print("error in UserModel, loginUser().")
             }
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("application/json", forHTTPHeaderField: "Accept")
             let session = URLSession.shared
             let user = session.dataTask(with: request as URLRequest, completionHandler: completionHandler)
             user.resume()
