@@ -14,11 +14,18 @@ class AddEditVC: UIViewController {
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBAction func addPressed(_ sender: UIButton) {
-        print("Add button pressed")
-        print(titleTextField.text)
-        print(locationTextField.text)
-        print(datePicker.date)
-        dismiss(animated: true, completion: nil)
+        EventModel.addNewEvent(newEvent: ["name": titleTextField.text!, "location": locationTextField.text!, "time": "\(datePicker!.date)", "host": "test"], completionHandler: {
+            data, response, error in
+            do {
+                print("Adding new event...")
+                if let newEvent = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+                    print("added: ", newEvent)
+                    
+                }
+            } catch {
+                print("something went wrong")
+            }
+        })
     }
     @IBAction func cancelPressed(_ sender: UIButton) {
         print("Cancel button pressed")

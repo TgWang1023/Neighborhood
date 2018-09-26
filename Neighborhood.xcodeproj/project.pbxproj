@@ -10,6 +10,7 @@
 		3031AFE2215AE56B00BAABFA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3031AFE1215AE56B00BAABFA /* UserModel.swift */; };
 		3031AFE4215C3DBE00BAABFA /* LoggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3031AFE3215C3DBE00BAABFA /* LoggedInUser.swift */; };
 		62136C85215AB4E20023A30D /* AddEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62136C84215AB4E20023A30D /* AddEditVC.swift */; };
+		62136C87215C0DAA0023A30D /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62136C86215C0DAA0023A30D /* EventModel.swift */; };
 		627A03A321599BE90072A991 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A03A221599BE90072A991 /* EventsVC.swift */; };
 		627A03A92159A0720072A991 /* MyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A03A82159A0720072A991 /* MyEventCell.swift */; };
 		B41AEC7C215945A60051E926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC7B215945A60051E926 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 		3031AFE1215AE56B00BAABFA /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3031AFE3215C3DBE00BAABFA /* LoggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUser.swift; sourceTree = "<group>"; };
 		62136C84215AB4E20023A30D /* AddEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditVC.swift; sourceTree = "<group>"; };
+		62136C86215C0DAA0023A30D /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		627A03A221599BE90072A991 /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
 		627A03A82159A0720072A991 /* MyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventCell.swift; sourceTree = "<group>"; };
 		B41AEC78215945A60051E926 /* Neighborhood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neighborhood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 				627A03A221599BE90072A991 /* EventsVC.swift */,
 				627A03A82159A0720072A991 /* MyEventCell.swift */,
 				3031AFE1215AE56B00BAABFA /* UserModel.swift */,
+				62136C86215C0DAA0023A30D /* EventModel.swift */,
 				B41AEC9021598AE20051E926 /* RegisterViewController.swift */,
 				B41AEC7D215945A60051E926 /* LoginViewController.swift */,
 				B41AEC85215945A80051E926 /* Assets.xcassets */,
@@ -181,6 +184,7 @@
 				B41AEC9321599B910051E926 /* ShareViewController.swift in Sources */,
 				B41AEC84215945A60051E926 /* Neighborhood.xcdatamodeld in Sources */,
 				3031AFE2215AE56B00BAABFA /* UserModel.swift in Sources */,
+				62136C87215C0DAA0023A30D /* EventModel.swift in Sources */,
 				B41AEC9121598AE20051E926 /* RegisterViewController.swift in Sources */,
 				3031AFE4215C3DBE00BAABFA /* LoggedInUser.swift in Sources */,
 			);
