@@ -10,13 +10,13 @@ import Foundation
 
 class UserModel {
     static func getAllUsers(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        let url = URL(string: "http://13.56.81.225/users")
+        let url = URL(string: "http://localhost:8000/users")
         let session = URLSession.shared
         let user = session.dataTask(with: url!, completionHandler: completionHandler)
         user.resume()
     }
     static func addNewUser(newUser: [String:String], completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://13.56.81.225/users") {
+        if let urlToReq = URL(string: "http://localhost:8000/users") {
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "POST"
             let bodyData = ["username": newUser["username"]!,
@@ -40,7 +40,7 @@ class UserModel {
         }
     }
     static func loginUser(findUser: [String: String], completionHandler:@escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://13.56.81.225/users/login") {
+        if let urlToReq = URL(string: "http://localhost:8000/users/login") {
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "POST"
             let bodyData = ["username": findUser["username"]!,
