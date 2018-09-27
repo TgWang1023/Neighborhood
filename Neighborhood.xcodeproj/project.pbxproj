@@ -19,6 +19,7 @@
 		B41AEC9321599B910051E926 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC9221599B910051E926 /* ShareViewController.swift */; };
 		B41AEC95215AB3510051E926 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC94215AB3510051E926 /* PostViewController.swift */; };
 		B41AEC97215AB3680051E926 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC96215AB3680051E926 /* ItemsTableViewController.swift */; };
+		B41AEC99215B136C0051E926 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AEC98215B136C0051E926 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B41AEC9221599B910051E926 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B41AEC94215AB3510051E926 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		B41AEC96215AB3680051E926 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
+		B41AEC98215B136C0051E926 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				B41AEC7B215945A60051E926 /* AppDelegate.swift */,
 				B41AEC7D215945A60051E926 /* LoginViewController.swift */,
 				B41AEC7F215945A60051E926 /* Main.storyboard */,
+				B41AEC98215B136C0051E926 /* HomeViewController.swift */,
 				B41AEC96215AB3680051E926 /* ItemsTableViewController.swift */,
 				B41AEC94215AB3510051E926 /* PostViewController.swift */,
 				B41AEC9221599B910051E926 /* ShareViewController.swift */,
@@ -161,6 +164,7 @@
 				B41AEC7E215945A60051E926 /* LoginViewController.swift in Sources */,
 				627A03A321599BE90072A991 /* EventsVC.swift in Sources */,
 				B41AEC7C215945A60051E926 /* AppDelegate.swift in Sources */,
+				B41AEC99215B136C0051E926 /* HomeViewController.swift in Sources */,
 				B41AEC97215AB3680051E926 /* ItemsTableViewController.swift in Sources */,
 				B41AEC9321599B910051E926 /* ShareViewController.swift in Sources */,
 				B41AEC84215945A60051E926 /* Neighborhood.xcdatamodeld in Sources */,

@@ -202,7 +202,7 @@
         <!--Main-->
         <scene sceneID="3dh-BR-a0l">
             <objects>
-                <viewController id="Pil-wg-htA" sceneMemberID="viewController">
+                <viewController id="Pil-wg-htA" customClass="HomeViewController" customModule="Neighborhood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zL5-g6-tHC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -581,6 +581,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hu8-PL-RNr"/>
+        <segue reference="A9M-Pz-JcO"/>
     </inferredMetricsTieBreakers>
 </document>
