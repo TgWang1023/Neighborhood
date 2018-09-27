@@ -36,4 +36,5 @@ class ShareModel {
             let share = session.dataTask(with: request as URLRequest, completionHandler: completionHandler)
             share.resume()
         }
+    }
 }
