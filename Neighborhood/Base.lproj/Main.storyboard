@@ -303,26 +303,69 @@
                                 <rect key="frame" x="0.0" y="432" width="375" height="186"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyEventCell" id="Tlr-Z7-ULz" customClass="MyEventCell" customModule="Neighborhood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyEventCell" rowHeight="82" id="Tlr-Z7-ULz" customClass="MyEventCell" customModule="Neighborhood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tlr-Z7-ULz" id="kKN-bo-Ycn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="81.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcH-7h-wdf">
-                                                    <rect key="frame" x="15" y="12" width="75" height="21"/>
+                                                    <rect key="frame" x="270" y="2" width="75" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbR-5B-hVc">
+                                                    <rect key="frame" x="15" y="-3" width="38" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0q-8T-p2A">
+                                                    <rect key="frame" x="15" y="29" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventLocation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NO-dH-TI6">
+                                                    <rect key="frame" x="236" y="29" width="108" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILl-oA-axZ">
+                                                    <rect key="frame" x="15" y="50" width="47" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-gi-8Es">
+                                                    <rect key="frame" x="264" y="50" width="80" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="LcH-7h-wdf" firstAttribute="bottom" secondItem="kKN-bo-Ycn" secondAttribute="bottomMargin" id="UgC-M4-3hA"/>
-                                                <constraint firstItem="LcH-7h-wdf" firstAttribute="leading" secondItem="kKN-bo-Ycn" secondAttribute="leadingMargin" id="zgC-vU-1sK"/>
+                                                <constraint firstItem="ZbR-5B-hVc" firstAttribute="baseline" secondItem="LcH-7h-wdf" secondAttribute="baseline" constant="4" id="3x6-aO-ht7"/>
+                                                <constraint firstItem="LcH-7h-wdf" firstAttribute="top" secondItem="kKN-bo-Ycn" secondAttribute="topMargin" constant="-9" id="6af-8j-bbK"/>
+                                                <constraint firstItem="i0q-8T-p2A" firstAttribute="leading" secondItem="ZbR-5B-hVc" secondAttribute="leading" id="7qs-21-UDK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gpd-gi-8Es" secondAttribute="trailing" constant="16" id="MkP-Ae-nJt"/>
+                                                <constraint firstItem="i0q-8T-p2A" firstAttribute="top" secondItem="ZbR-5B-hVc" secondAttribute="bottom" constant="2" id="Mtb-YR-XnW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LcH-7h-wdf" secondAttribute="trailing" constant="15" id="NPb-5S-Fog"/>
+                                                <constraint firstItem="ZbR-5B-hVc" firstAttribute="leading" secondItem="kKN-bo-Ycn" secondAttribute="leadingMargin" id="RMi-ku-6Kl"/>
+                                                <constraint firstItem="ZbR-5B-hVc" firstAttribute="top" secondItem="kKN-bo-Ycn" secondAttribute="topMargin" constant="-14" id="Sj1-PK-d8e"/>
+                                                <constraint firstItem="i0q-8T-p2A" firstAttribute="top" secondItem="6NO-dH-TI6" secondAttribute="top" id="UCW-P3-d7o"/>
+                                                <constraint firstItem="ILl-oA-axZ" firstAttribute="top" secondItem="i0q-8T-p2A" secondAttribute="bottom" id="bbD-fN-6ai"/>
+                                                <constraint firstItem="i0q-8T-p2A" firstAttribute="leading" secondItem="ILl-oA-axZ" secondAttribute="leading" id="caP-E7-kjR"/>
+                                                <constraint firstItem="ILl-oA-axZ" firstAttribute="top" secondItem="gpd-gi-8Es" secondAttribute="top" id="lyC-jN-R81"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6NO-dH-TI6" secondAttribute="trailing" constant="16" id="scL-1M-hcL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="eventLocationLabel" destination="6NO-dH-TI6" id="gHC-ms-0lR"/>
+                                            <outlet property="eventTimeLabel" destination="gpd-gi-8Es" id="f3M-MZ-1pa"/>
                                             <outlet property="eventTitleLabel" destination="LcH-7h-wdf" id="X8O-gn-BKG"/>
                                         </connections>
                                     </tableViewCell>
@@ -353,13 +396,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" id="2XV-JV-464"/>
                     <connections>
+                        <outlet property="mapView" destination="YAf-Gn-7oT" id="AHw-02-TNC"/>
                         <outlet property="tableView" destination="Rrt-gF-CHZ" id="u3Z-pY-kPG"/>
                         <segue destination="UL5-Ls-bdO" kind="show" identifier="AddEditEventSegue" id="tpw-NY-NIb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVy-tg-KFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1681" y="878"/>
+            <point key="canvasLocation" x="1680.8" y="877.51124437781118"/>
         </scene>
         <!--Add EditVC-->
         <scene sceneID="idt-Ca-wLL">
