@@ -26,6 +26,7 @@ class AddEditVC: UIViewController {
                 print("something went wrong")
             }
         })
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func cancelPressed(_ sender: UIButton) {
         print("Cancel button pressed")
