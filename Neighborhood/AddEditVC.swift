@@ -10,18 +10,29 @@ import UIKit
 
 class AddEditVC: UIViewController {
 
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBAction func addPressed(_ sender: UIButton) {
-        print("Add button pressed")
-        dismiss(animated: true, completion: nil)
+        EventModel.addNewEvent(newEvent: ["name": titleTextField.text!, "location": locationTextField.text!, "time": "\(datePicker!.date)", "host": "test"], completionHandler: {
+            data, response, error in
+            do {
+                print("Adding new event...")
+                if let newEvent = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+                    print("added: ", newEvent)
+                    
+                }
+            } catch {
+                print("something went wrong")
+            }
+        })
     }
     @IBAction func cancelPressed(_ sender: UIButton) {
-        print("Cancel Pressed")
+        print("Cancel button pressed")
         dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
