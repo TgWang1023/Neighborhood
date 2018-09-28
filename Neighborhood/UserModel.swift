@@ -58,4 +58,10 @@ class UserModel {
             user.resume()
         }
     }
+    static func findOneUser(userToFind: String, completionHandler:@escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+        let url = URL(string: "http://localhost:8000/users/\(userToFind)")
+        let session = URLSession.shared
+        let user = session.dataTask(with: url!, completionHandler: completionHandler)
+        user.resume()
+    }
 }

@@ -26,12 +26,8 @@ class ShareViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         performSegue(withIdentifier: "PostSegue", sender: 2)
     }
     
-    @IBAction func allPostedItems(_ sender: UIButton) {
-        performSegue(withIdentifier: "ItemsSegue", sender: 3)
-    }
-    
-    @IBAction func allItemRequests(_ sender: Any) {
-        performSegue(withIdentifier: "ItemsSegue", sender: 4)
+    @IBAction func allItems(_ sender: UIButton) {
+        performSegue(withIdentifier: "ItemsSegue", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -58,17 +54,5 @@ class ShareViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
                 dest.isAvailable = false
             }
         }
-        if (segue.identifier == "ItemSegue") {
-            let dest = segue.destination as! ItemsViewController
-            let postType = sender as! Int
-            if postType == 3 {
-//                dest.isLending = true
-//                dest.isAvailable = true
-            } else if postType == 4 {
-//                dest.isLending = false
-//                dest.isAvailable = false
-            }
-        }
     }
-
 }
