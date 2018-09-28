@@ -10,7 +10,7 @@ import Foundation
 
 class UserModel {
     static func getAllUsers(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        let url = URL(string: "http://13.56.81.225/users")
+        let url = URL(string: "http://localhost:8000/users")
         let session = URLSession.shared
         let user = session.dataTask(with: url!, completionHandler: completionHandler)
         user.resume()
