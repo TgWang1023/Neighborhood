@@ -76,6 +76,7 @@ class ShareViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let share = view.annotation as! ShareAnnotation
         print("accessory button tapped")
+        print(share.shareId)
         performSegue(withIdentifier: "DisplayShareFromMapSegue", sender: share.shareId)
     }
     
@@ -137,7 +138,7 @@ class ShareViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         if (segue.identifier == "DisplayShareFromMapSegue"){
             let dest = segue.destination as! DisplayShareViewController
             let shareId = sender as! String
-           
+            dest.shareId = shareId
         }
     }
 }
