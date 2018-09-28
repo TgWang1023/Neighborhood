@@ -81,6 +81,7 @@ class RegisterViewController: UIViewController {
         registrationErrorLabel.isHidden = true
         super.viewDidLoad()
         manager.delegate = self as? CLLocationManagerDelegate
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {

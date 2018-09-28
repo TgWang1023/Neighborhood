@@ -22,6 +22,7 @@ class PostViewController: UIViewController {
         errorLabel.isHidden = true
         super.viewDidLoad()
         print(isLending, isAvailable)
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {

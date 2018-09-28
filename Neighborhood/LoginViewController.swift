@@ -56,6 +56,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         loginErrorLabel.isHidden = true
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
