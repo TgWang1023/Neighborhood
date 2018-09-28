@@ -73,7 +73,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
             let indexPath = sender as! NSIndexPath
             dest.item = tableData[indexPath.row]["item"] as! String
             dest.itemDescription = tableData[indexPath.row]["description"] as! String
-            
+            dest.shareId = tableData[indexPath.row]["_id"] as! String
             if ((tableData[indexPath.row]).value(forKey: "isLending")) as! Bool == true {
                 dest.isLending = "Lending out."
                 UserModel.findOneUser(userToFind: ((tableData[indexPath.row]).value(forKey: "lender")) as! String, completionHandler: {
@@ -86,6 +86,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
                         }
                         DispatchQueue.main.async {
                             // do something?
+                            
                         }
                     } catch {
                         

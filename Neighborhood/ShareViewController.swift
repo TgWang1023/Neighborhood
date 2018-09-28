@@ -72,10 +72,11 @@ class ShareViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         return annotationView
     }
     
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let share = view.annotation as! ShareAnnotation
         print("accessory button tapped")
-//        performSegue(withIdentifier: "EventDetailsSegue", sender: event)
+        performSegue(withIdentifier: "DisplayShareFromMapSegue", sender: share.shareId)
     }
     
     func fetchMapData(){
@@ -132,6 +133,11 @@ class ShareViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
                 dest.isLending = false
                 dest.isAvailable = false
             }
+        }
+        if (segue.identifier == "DisplayShareFromMapSegue"){
+            let dest = segue.destination as! DisplayShareViewController
+            let shareId = sender as! String
+           
         }
     }
 }

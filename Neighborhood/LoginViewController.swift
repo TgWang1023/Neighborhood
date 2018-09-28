@@ -11,6 +11,7 @@ import CoreLocation
 
 class LoginViewController: UIViewController {
 
+    var gradientLayer: CAGradientLayer!
     let locationManager = CLLocationManager()
     
     @IBOutlet weak var usernameTextLabel: UITextField!
@@ -57,8 +58,22 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createGradientLayer()
+    }
+    
     @IBAction func registerNewAccount(_ sender: UIButton) {
         performSegue(withIdentifier: "ToRegisterSegue", sender: nil)
+    }
+    
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+        gradientLayer.colors = [UIColor(hue: 0.3556, saturation: 0.3, brightness: 0.97, alpha: 1.0).cgColor, UIColor(hue: 0.3028, saturation: 0.68, brightness: 0.66, alpha: 1.0).cgColor]
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
 }
