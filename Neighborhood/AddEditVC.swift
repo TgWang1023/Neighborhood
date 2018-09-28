@@ -33,6 +33,7 @@ class AddEditVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
+        datePicker?.setValue(UIColor.white, forKey: "textColor")
         super.viewDidLoad()
     }
     
