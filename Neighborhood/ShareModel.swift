@@ -27,6 +27,24 @@ class ShareModel {
         let requests = session.dataTask(with: url!, completionHandler: completionHandler)
         requests.resume()
     }
+    static func sendResponse(shareId: String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+        if let urlToReq = URL(string: "http://localhost:8000/shares/notify/\(shareId)") {
+            var request = URLRequest(url: urlToReq)
+            request.httpMethod = "POST"
+            let bodyData = ["responder" : LoggedInUser.shared.id]
+            print("from ShareModel:", bodyData)
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: bodyData)
+            } catch {
+                print("error in ShareModel, addNewShare().")
+            }
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("application/json", forHTTPHeaderField: "Accept")
+            let session = URLSession.shared
+            let share = session.dataTask(with: request as URLRequest, completionHandler: completionHandler)
+            share.resume()
+        }
+    }
     static func addNewShare(newShare: [String:Any], completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
         if let urlToReq = URL(string: "http://localhost:8000/shares") {
             var request = URLRequest(url: urlToReq)
