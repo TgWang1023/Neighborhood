@@ -10,6 +10,7 @@ import UIKit
 
 class PostViewController: UIViewController {
     
+    var gradientLayer: CAGradientLayer!
     var isLending: Bool = true
     var isAvailable: Bool = true
 
@@ -21,6 +22,11 @@ class PostViewController: UIViewController {
         errorLabel.isHidden = true
         super.viewDidLoad()
         print(isLending, isAvailable)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createGradientLayer()
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
@@ -65,4 +71,14 @@ class PostViewController: UIViewController {
             }
         }
     }
+    
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+        gradientLayer.colors = [UIColor(hue: 0.8361, saturation: 0.54, brightness: 0.99, alpha: 1.0).cgColor, UIColor(hue: 0.7972, saturation: 0.66, brightness: 0.9, alpha: 1.0).cgColor]
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
 }
