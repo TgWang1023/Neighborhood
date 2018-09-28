@@ -818,6 +818,12 @@
                                     <action selector="backButtonPressed:" destination="p1d-lG-9H9" eventType="touchUpInside" id="Q8F-ta-GnC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH1-rt-PcP">
+                                <rect key="frame" x="16" y="180" width="343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -828,6 +834,8 @@
                             <constraint firstItem="nsa-jd-DhH" firstAttribute="top" secondItem="eC4-DS-teV" secondAttribute="top" constant="16" id="CaH-NG-sKy"/>
                             <constraint firstItem="sNZ-bo-zzx" firstAttribute="top" secondItem="6UW-5d-QkP" secondAttribute="bottom" constant="8" id="Clb-Y6-DwO"/>
                             <constraint firstItem="6UW-5d-QkP" firstAttribute="leading" secondItem="eC4-DS-teV" secondAttribute="leading" constant="16" id="DpT-Dr-Plg"/>
+                            <constraint firstItem="kH1-rt-PcP" firstAttribute="top" secondItem="fOa-Cs-PT7" secondAttribute="bottom" constant="8" id="EZ1-TN-x6K"/>
+                            <constraint firstItem="eC4-DS-teV" firstAttribute="trailing" secondItem="kH1-rt-PcP" secondAttribute="trailing" constant="16" id="HNa-ex-o8G"/>
                             <constraint firstItem="6UW-5d-QkP" firstAttribute="top" secondItem="Ron-lB-YOt" secondAttribute="bottom" constant="8" id="Iqz-US-7Ua"/>
                             <constraint firstItem="Ron-lB-YOt" firstAttribute="top" secondItem="nsa-jd-DhH" secondAttribute="bottom" constant="16" id="MgU-m2-fuD"/>
                             <constraint firstItem="eC4-DS-teV" firstAttribute="trailing" secondItem="Ron-lB-YOt" secondAttribute="trailing" constant="16" id="Z6V-MO-aVd"/>
@@ -836,6 +844,7 @@
                             <constraint firstItem="eC4-DS-teV" firstAttribute="trailing" secondItem="6UW-5d-QkP" secondAttribute="trailing" constant="16" id="hhb-cx-OIA"/>
                             <constraint firstItem="fOa-Cs-PT7" firstAttribute="top" secondItem="sNZ-bo-zzx" secondAttribute="bottom" constant="8" id="trd-Md-Rvq"/>
                             <constraint firstItem="eC4-DS-teV" firstAttribute="trailing" secondItem="sNZ-bo-zzx" secondAttribute="trailing" constant="16" id="vic-6A-NEe"/>
+                            <constraint firstItem="kH1-rt-PcP" firstAttribute="leading" secondItem="eC4-DS-teV" secondAttribute="leading" constant="16" id="wL8-Qd-eRI"/>
                             <constraint firstItem="eC4-DS-teV" firstAttribute="trailing" secondItem="nsa-jd-DhH" secondAttribute="trailing" constant="16" id="xyP-fd-e2x"/>
                             <constraint firstItem="AYY-sJ-xbM" firstAttribute="centerX" secondItem="1OZ-rr-p3r" secondAttribute="centerX" id="z8l-bM-w3A"/>
                         </constraints>
@@ -844,6 +853,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="fOa-Cs-PT7" id="lgy-KO-n0U"/>
                         <outlet property="contactLabel" destination="sNZ-bo-zzx" id="v0g-fw-Kyd"/>
+                        <outlet property="descriptionLabel" destination="kH1-rt-PcP" id="4NB-0e-sVF"/>
                         <outlet property="isLendingLabel" destination="Ron-lB-YOt" id="fNi-EE-BTD"/>
                         <outlet property="itemLabel" destination="nsa-jd-DhH" id="d6Y-0Q-lQT"/>
                         <outlet property="userLabel" destination="6UW-5d-QkP" id="sgk-qo-I46"/>

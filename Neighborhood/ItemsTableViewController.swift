@@ -23,10 +23,6 @@ class ItemsViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        print(isLending)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         fetchAllShares()
     }
     
@@ -76,6 +72,7 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
             let dest = segue.destination as! DisplayShareViewController
             let indexPath = sender as! NSIndexPath
             dest.item = tableData[indexPath.row]["item"] as! String
+            dest.itemDescription = tableData[indexPath.row]["description"] as! String
             
             if ((tableData[indexPath.row]).value(forKey: "isLending")) as! Bool == true {
                 dest.isLending = "Lending out."
@@ -83,7 +80,9 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
                     data, response, error in
                     do {
                         if let user = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                            print(user)
+                            dest.user = user["username"]! as! String
+                            dest.contact = user["contact"]! as! String
+                            dest.address = user["address"]! as! String
                         }
                         DispatchQueue.main.async {
                             // do something?
@@ -94,6 +93,21 @@ extension ItemsViewController: UITableViewDataSource, UITableViewDelegate {
                 })
             } else if ((tableData[indexPath.row] ).value(forKey: "isLending")) as! Bool == false {
                 dest.isLending = "Looking to borrow."
+                UserModel.findOneUser(userToFind: ((tableData[indexPath.row]).value(forKey: "borrower")) as! String, completionHandler: {
+                    data, response, error in
+                    do {
+                        if let user = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+                            dest.user = user["username"]! as! String
+                            dest.contact = user["contact"]! as! String
+                            dest.address = user["address"]! as! String
+                        }
+                        DispatchQueue.main.async {
+                            // do something?
+                        }
+                    } catch {
+                        
+                    }
+                })
             }
             
         }
