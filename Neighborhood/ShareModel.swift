@@ -33,8 +33,8 @@ class ShareModel {
             request.httpMethod = "POST"
             if (newShare["lender"] as! String).count == 0 {
                 let bodyData = ["item": newShare["item"]!,
-                                "lending": newShare["lending"]!,
                                 "isAvailable": newShare["isAvailable"]!,
+                                "isLending": newShare["isLending"]!,
                                 "description": newShare["description"]!,
                                 "borrower": newShare["borrower"]!,
                                 "longitude": LoggedInUser.shared.longitude,
@@ -54,8 +54,8 @@ class ShareModel {
                 share.resume()
             } else if (newShare["borrower"] as! String).count == 0{
                 let bodyData = ["item": newShare["item"]!,
-                                "lending": newShare["lending"]!,
                                 "isAvailable": newShare["isAvailable"]!,
+                                "isLending": newShare["isLending"]!,
                                 "description": newShare["description"]!,
                                 "lender": newShare["lender"]!,
                                 "longitude": LoggedInUser.shared.longitude,

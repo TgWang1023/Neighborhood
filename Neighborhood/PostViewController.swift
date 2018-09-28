@@ -33,10 +33,10 @@ class PostViewController: UIViewController {
             errorLabel.isHidden = false
         } else {
             if isLending == true {
-                ShareModel.addNewShare(newShare: ["item": itemTextField.text!, "lending": isLending, "isAvailable": isAvailable, "description": descriptionTextField.text!, "lender": LoggedInUser.shared.id, "borrower": ""], completionHandler: {
+                ShareModel.addNewShare(newShare: ["item": itemTextField.text!, "isLending": isLending, "isAvailable": isAvailable, "description":  descriptionTextField.text!, "lender": LoggedInUser.shared.id, "borrower": ""], completionHandler: {
                     data, response, error in
                     do {
-                        print("Adding new share...")
+                        print("Adding new share...", self.isLending)
                         if let newShare = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                             print("Added share: ", newShare)
                             DispatchQueue.main.async {
@@ -48,7 +48,7 @@ class PostViewController: UIViewController {
                     }
                 })
             } else if isLending == false {
-                ShareModel.addNewShare(newShare: ["item": itemTextField.text!, "lending": isLending, "isAvailable": isAvailable, "description": descriptionTextField.text!, "borrower": LoggedInUser.shared.id, "lender": ""], completionHandler: {
+                ShareModel.addNewShare(newShare: ["item": itemTextField.text!, "isLending": isLending, "isAvailable": isAvailable, "description": descriptionTextField.text!, "borrower": LoggedInUser.shared.id, "lender": ""], completionHandler: {
                     data, response, error in
                     do {
                         print("Adding new share...")
