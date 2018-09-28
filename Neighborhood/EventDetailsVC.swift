@@ -74,7 +74,9 @@ class EventDetailsVC: UIViewController {
             } catch {
                 print("Something went wrong")
             }
-        })    }
+        })
+        
+    }
 
 }
 

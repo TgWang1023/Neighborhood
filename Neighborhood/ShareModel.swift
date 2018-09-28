@@ -15,6 +15,18 @@ class ShareModel {
         let share = session.dataTask(with: url!, completionHandler: completionHandler)
         share.resume()
     }
+    static func getUserPosts(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+        let url = URL(string: "http://localhost:8000/shares/lending/\(LoggedInUser.shared.id)")
+        let session = URLSession.shared
+        let posts = session.dataTask(with: url!, completionHandler: completionHandler)
+        posts.resume()
+    }
+    static func getUserRequests(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+        let url = URL(string: "http://localhost:8000/shares/borrowing/\(LoggedInUser.shared.id)")
+        let session = URLSession.shared
+        let requests = session.dataTask(with: url!, completionHandler: completionHandler)
+        requests.resume()
+    }
     static func addNewShare(newShare: [String:Any], completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
         if let urlToReq = URL(string: "http://localhost:8000/shares") {
             var request = URLRequest(url: urlToReq)
@@ -24,7 +36,10 @@ class ShareModel {
                                 "lending": newShare["lending"]!,
                                 "isAvailable": newShare["isAvailable"]!,
                                 "description": newShare["description"]!,
-                                "borrower": newShare["borrower"]!
+                                "borrower": newShare["borrower"]!,
+                                "longitude": LoggedInUser.shared.longitude,
+                                "latitude" : LoggedInUser.shared.latitude,
+                                "isLending" : false
                 ]
                 print("from ShareModel:", bodyData)
                 do {
@@ -42,7 +57,10 @@ class ShareModel {
                                 "lending": newShare["lending"]!,
                                 "isAvailable": newShare["isAvailable"]!,
                                 "description": newShare["description"]!,
-                                "lender": newShare["lender"]!
+                                "lender": newShare["lender"]!,
+                                "longitude": LoggedInUser.shared.longitude,
+                                "latitude" : LoggedInUser.shared.latitude,
+                                "isLending" : true
                 ]
                 print("from ShareModel:", bodyData)
                 do {
