@@ -680,31 +680,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eds-cN-1Zx">
-                                <rect key="frame" x="0.0" y="20" width="375" height="400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="Pif-Sy-Ml9"/>
                                 </constraints>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UOK-HX-BTw">
-                                <rect key="frame" x="0.0" y="420" width="375" height="198"/>
+                                <rect key="frame" x="0.0" y="400" width="375" height="218"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-Bu-DX4">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
-                                        <state key="normal" title="Lend Item"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
+                                        <color key="backgroundColor" red="0.2569914848" green="0.78616803869999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
+                                        <state key="normal" title="Lend Item">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="postItemForUse:" destination="dGU-BX-zOY" eventType="touchUpInside" id="eUk-7X-hdP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNQ-gA-M6C">
-                                        <rect key="frame" x="0.0" y="66" width="375" height="66"/>
-                                        <state key="normal" title="Borrow Request"/>
+                                        <rect key="frame" x="0.0" y="72.5" width="375" height="73"/>
+                                        <color key="backgroundColor" red="0.4078189854" green="0.62057597799999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
+                                        <state key="normal" title="Borrow Request">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="postItemRequest:" destination="dGU-BX-zOY" eventType="touchUpInside" id="d0g-nW-ufJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKI-R0-Rwq">
-                                        <rect key="frame" x="0.0" y="132" width="375" height="66"/>
-                                        <state key="normal" title="All Items"/>
+                                        <rect key="frame" x="0.0" y="145.5" width="375" height="72.5"/>
+                                        <color key="backgroundColor" red="0.27464838949999998" green="0.31464330359999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="25"/>
+                                        <state key="normal" title="All Items">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="allItems:" destination="dGU-BX-zOY" eventType="touchUpInside" id="NTx-h2-IbX"/>
                                         </connections>
@@ -716,7 +728,7 @@
                         <constraints>
                             <constraint firstItem="eds-cN-1Zx" firstAttribute="leading" secondItem="6vZ-lD-dsr" secondAttribute="leading" id="2fd-Ny-fub"/>
                             <constraint firstItem="UOK-HX-BTw" firstAttribute="leading" secondItem="6vZ-lD-dsr" secondAttribute="leading" id="6Za-G6-m73"/>
-                            <constraint firstItem="eds-cN-1Zx" firstAttribute="top" secondItem="6vZ-lD-dsr" secondAttribute="top" id="BQI-tI-icn"/>
+                            <constraint firstItem="eds-cN-1Zx" firstAttribute="top" secondItem="KlR-yK-xVf" secondAttribute="top" id="BHk-md-nxY"/>
                             <constraint firstItem="UOK-HX-BTw" firstAttribute="top" secondItem="eds-cN-1Zx" secondAttribute="bottom" id="OKh-HG-Ii7"/>
                             <constraint firstItem="UOK-HX-BTw" firstAttribute="trailing" secondItem="6vZ-lD-dsr" secondAttribute="trailing" id="Olb-qy-13G"/>
                             <constraint firstItem="6vZ-lD-dsr" firstAttribute="trailing" secondItem="eds-cN-1Zx" secondAttribute="trailing" id="Pao-MC-Gzs"/>
