@@ -38,8 +38,7 @@ class ShareModel {
                                 "description": newShare["description"]!,
                                 "borrower": newShare["borrower"]!,
                                 "longitude": LoggedInUser.shared.longitude,
-                                "latitude" : LoggedInUser.shared.latitude,
-                                "isLending" : false
+                                "latitude" : LoggedInUser.shared.latitude
                 ]
                 print("from ShareModel:", bodyData)
                 do {
@@ -59,8 +58,7 @@ class ShareModel {
                                 "description": newShare["description"]!,
                                 "lender": newShare["lender"]!,
                                 "longitude": LoggedInUser.shared.longitude,
-                                "latitude" : LoggedInUser.shared.latitude,
-                                "isLending" : true
+                                "latitude" : LoggedInUser.shared.latitude
                 ]
                 print("from ShareModel:", bodyData)
                 do {

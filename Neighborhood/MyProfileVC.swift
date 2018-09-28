@@ -72,16 +72,16 @@ class MyProfileVC: UIViewController {
         })
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "MyPostsSegue"{
+            let indexPath = sender as! IndexPath
+            let dest = segue.destination as! MyPostsVC
+            dest.tableData = lendingData[indexPath.row].value(forKey: "responses") as! [NSDictionary]
+            dest.item = lendingData[indexPath.row].value(forKey: "item") as! String
+            dest.desc = lendingData[indexPath.row].value(forKey: "description") as! String
+        }
     }
-    */
-
 }
 
 extension MyProfileVC: UITableViewDelegate, UITableViewDataSource{
@@ -110,4 +110,11 @@ extension MyProfileVC: UITableViewDelegate, UITableViewDataSource{
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == self.lendingTableView{
+            performSegue(withIdentifier: "MyPostsSegue", sender: indexPath)
+        } else if tableView == self.borrowingTableView{
+            // TODO: didSelect for borrowingTableView
+        }
+    }
 }
