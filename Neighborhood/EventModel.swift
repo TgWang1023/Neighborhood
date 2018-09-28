@@ -10,19 +10,19 @@ import Foundation
 
 class EventModel {
     static func getAllEvents(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        let url = URL(string: "http://localhost:8000/events")
+        let url = URL(string: "http://13.56.81.225/events")
         let session = URLSession.shared
         let event = session.dataTask(with: url!, completionHandler: completionHandler)
         event.resume()
     }
     static func getUserEvents(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        let url = URL(string: "http://localhost:8000/events/user/\(LoggedInUser.shared.id)")
+        let url = URL(string: "http://13.56.81.225/events/user/\(LoggedInUser.shared.id)")
         let session = URLSession.shared
         let events = session.dataTask(with: url!, completionHandler: completionHandler)
         events.resume()
     }
     static func deleteEvent(event_id:String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://localhost:8000/events/\(event_id)"){
+        if let urlToReq = URL(string: "http://13.56.81.225/events/\(event_id)"){
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "DELETE"
             let session = URLSession.shared
@@ -31,7 +31,7 @@ class EventModel {
         }
     }
     static func getAnEvent(event_id:String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://localhost:8000/events/\(event_id)"){
+        if let urlToReq = URL(string: "http://13.56.81.225/events/\(event_id)"){
             var request = URLRequest(url: urlToReq)
             let session = URLSession.shared
             let events = session.dataTask(with: request as URLRequest, completionHandler: completionHandler)
@@ -39,7 +39,7 @@ class EventModel {
         }
     }
     static func attentAnEvent(event_id:String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://localhost:8000/events/\(event_id)") {
+        if let urlToReq = URL(string: "http://13.56.81.225/events/\(event_id)") {
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "POST"
             let bodyData = ["attendee_id": LoggedInUser.shared.id]
@@ -58,7 +58,7 @@ class EventModel {
         }
     }
     static func addNewEvent(newEvent: [String:String], completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://localhost:8000/events") {
+        if let urlToReq = URL(string: "http://13.56.81.225/events") {
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "POST"
             let bodyData = ["name": newEvent["name"]!,

@@ -103,7 +103,7 @@ class ShareViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     }
     
     func pinOnMap(){
-        //        print("mapdata::::", mapData)
+        self.mapView.removeAnnotations(mapView.annotations)
         for i in 0..<mapData.count{
             let share = ShareAnnotation()
             let lat = (mapData[i].value(forKey: "latitude") as! NSString).doubleValue
@@ -114,8 +114,6 @@ class ShareViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             share.coordinate = CLLocationCoordinate2D(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees )
             self.mapView.addAnnotation(share)
         }
-        // print("pinMaps - \(parkingLots[i]["address"]! as! String)")
-        
     }
     
     func centerMapOnLocation(location: CLLocation) {

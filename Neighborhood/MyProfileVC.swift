@@ -81,6 +81,13 @@ class MyProfileVC: UIViewController {
             dest.item = lendingData[indexPath.row].value(forKey: "item") as! String
             dest.desc = lendingData[indexPath.row].value(forKey: "description") as! String
         }
+        else if segue.identifier == "MyRequestsSegue"{
+            let indexPath = sender as! IndexPath
+            let dest = segue.destination as! MyRequestsVC
+            dest.tableData = borrowingData[indexPath.row].value(forKey: "responses") as! [NSDictionary]
+            dest.item = borrowingData[indexPath.row].value(forKey: "item") as! String
+            dest.desc = borrowingData[indexPath.row].value(forKey: "description") as! String
+        }
     }
 }
 
@@ -114,7 +121,45 @@ extension MyProfileVC: UITableViewDelegate, UITableViewDataSource{
         if tableView == self.lendingTableView{
             performSegue(withIdentifier: "MyPostsSegue", sender: indexPath)
         } else if tableView == self.borrowingTableView{
-            // TODO: didSelect for borrowingTableView
+            performSegue(withIdentifier: "MyRequestsSegue", sender: indexPath)
         }
+    }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
+            if tableView == self.lendingTableView{
+                ShareModel.deleteShare(event_id: self.lendingData[indexPath.row]["_id"] as! String, completionHandler: {
+                    data, response, error in
+                    do {
+                        if let deleteEntry = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+                            
+                        }
+                        DispatchQueue.main.async {
+                            self.lendingData.remove(at: indexPath.row)
+                            self.lendingTableView.reloadData()
+                        }
+                    } catch {
+                        print("something went wrong")
+                    }
+                })
+                
+            } else if tableView == self.borrowingTableView{
+                ShareModel.deleteShare(event_id: self.borrowingData[indexPath.row]["_id"] as! String, completionHandler: {
+                    data, response, error in
+                    do {
+                        if let deleteEntry = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+                            
+                        }
+                        DispatchQueue.main.async {
+                            self.borrowingData.remove(at: indexPath.row)
+                            self.borrowingTableView.reloadData()
+                        }
+                    } catch {
+                        print("something went wrong")
+                    }
+                })
+            }
+        }
+        delete.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [delete])
     }
 }
