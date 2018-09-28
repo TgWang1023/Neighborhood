@@ -137,81 +137,96 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDm-S9-qem">
-                                <rect key="frame" x="125.5" y="50" width="124" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="115" y="50" width="145.5" height="35"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ah-3d-8M0">
-                                <rect key="frame" x="50" y="132" width="103" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="50" y="125" width="110" height="20"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgg-kA-lop">
-                                <rect key="frame" x="50" y="186" width="103" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgg-kA-lop">
+                                <rect key="frame" x="50" y="175" width="110" height="20"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat PW:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAo-9X-8Cz">
-                                <rect key="frame" x="50" y="240" width="103" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat PW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAo-9X-8Cz">
+                                <rect key="frame" x="50" y="225" width="110" height="20"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WyL-kF-dWF">
-                                <rect key="frame" x="163" y="129" width="162" height="30"/>
+                                <rect key="frame" x="170" y="120" width="155" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-C3-Qh8">
-                                <rect key="frame" x="163" y="183" width="162" height="30"/>
+                                <rect key="frame" x="170" y="170" width="155" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1h-VI-XJf">
-                                <rect key="frame" x="163" y="237" width="162" height="30"/>
+                                <rect key="frame" x="170" y="220" width="155" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEc-Ew-Vz8">
-                                <rect key="frame" x="159" y="547" width="57" height="30"/>
-                                <state key="normal" title="Register"/>
+                                <rect key="frame" x="137.5" y="449" width="100" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.48815868709999999" blue="0.11171739780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5s1-AA-YOL"/>
+                                    <constraint firstAttribute="height" constant="40" id="rUu-Wy-beT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="registerButtonPressed:" destination="hHV-9k-oUe" eventType="touchUpInside" id="t2y-6m-UdJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZg-kY-p4K">
-                                <rect key="frame" x="170.5" y="607" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                                <rect key="frame" x="137.5" y="519" width="100" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.87634612150000002" blue="0.19952840220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Sc6-NF-hXP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="hHV-9k-oUe" eventType="touchUpInside" id="Us6-2H-aZl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlG-E0-4PB">
-                                <rect key="frame" x="168.5" y="496" width="38" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="165.5" y="422" width="44" height="17"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHA-BE-3Dn">
-                                <rect key="frame" x="50" y="294" width="78" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHA-BE-3Dn">
+                                <rect key="frame" x="50" y="275" width="83" height="20"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaB-EX-Fko">
-                                <rect key="frame" x="50" y="408" width="75" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaB-EX-Fko">
+                                <rect key="frame" x="50" y="385" width="77.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Street, City State ZIP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDG-6u-1Bz">
-                                <rect key="frame" x="163" y="292" width="162" height="90"/>
+                                <rect key="frame" x="168" y="275" width="157" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="h6i-5o-nZY"/>
                                 </constraints>
@@ -220,7 +235,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="street-address"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone or Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CW6-CL-SGz">
-                                <rect key="frame" x="163" y="399" width="162" height="30"/>
+                                <rect key="frame" x="165.5" y="382" width="159.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -243,6 +258,7 @@
                             <constraint firstItem="wZg-kY-p4K" firstAttribute="centerX" secondItem="Iz3-ua-SXP" secondAttribute="centerX" id="T2M-Mk-1zh"/>
                             <constraint firstItem="pDG-6u-1Bz" firstAttribute="top" secondItem="v1h-VI-XJf" secondAttribute="bottom" constant="25" id="TbI-4o-2Yj"/>
                             <constraint firstItem="Kkx-Nb-oLI" firstAttribute="trailing" secondItem="CW6-CL-SGz" secondAttribute="trailing" constant="50" id="Tlg-al-BJw"/>
+                            <constraint firstItem="wZg-kY-p4K" firstAttribute="width" secondItem="YEc-Ew-Vz8" secondAttribute="width" id="UFU-o5-fr6"/>
                             <constraint firstItem="pDG-6u-1Bz" firstAttribute="leading" secondItem="QHA-BE-3Dn" secondAttribute="trailing" constant="35" id="VAn-rr-m6w"/>
                             <constraint firstItem="Kkx-Nb-oLI" firstAttribute="trailing" secondItem="WyL-kF-dWF" secondAttribute="trailing" constant="50" id="VH4-z1-O1B"/>
                             <constraint firstItem="CW6-CL-SGz" firstAttribute="leading" secondItem="AaB-EX-Fko" secondAttribute="trailing" constant="38" id="VjO-0T-NnX"/>
@@ -252,17 +268,17 @@
                             <constraint firstItem="CW6-CL-SGz" firstAttribute="top" secondItem="pDG-6u-1Bz" secondAttribute="bottom" constant="17" id="dGA-N4-9FC"/>
                             <constraint firstItem="hgg-kA-lop" firstAttribute="leading" secondItem="Kkx-Nb-oLI" secondAttribute="leading" constant="50" id="dHt-Jg-pbp"/>
                             <constraint firstItem="ddj-C3-Qh8" firstAttribute="leading" secondItem="hgg-kA-lop" secondAttribute="trailing" constant="10" id="ekE-Op-LVa"/>
-                            <constraint firstItem="Kkx-Nb-oLI" firstAttribute="bottom" secondItem="wZg-kY-p4K" secondAttribute="bottom" constant="30" id="h8k-ha-uUp"/>
+                            <constraint firstItem="YEc-Ew-Vz8" firstAttribute="top" secondItem="PlG-E0-4PB" secondAttribute="bottom" constant="10" id="hxY-lT-HWh"/>
                             <constraint firstItem="hgg-kA-lop" firstAttribute="top" secondItem="9Ah-3d-8M0" secondAttribute="bottom" constant="30" id="jCF-X0-aB7"/>
+                            <constraint firstItem="PlG-E0-4PB" firstAttribute="top" secondItem="CW6-CL-SGz" secondAttribute="bottom" constant="10" id="lGt-LI-lkE"/>
                             <constraint firstItem="Kkx-Nb-oLI" firstAttribute="trailing" secondItem="pDG-6u-1Bz" secondAttribute="trailing" constant="50" id="ocR-5h-q5O"/>
-                            <constraint firstItem="wZg-kY-p4K" firstAttribute="top" secondItem="YEc-Ew-Vz8" secondAttribute="bottom" constant="30" id="ooh-dS-5WX"/>
+                            <constraint firstItem="wZg-kY-p4K" firstAttribute="top" secondItem="YEc-Ew-Vz8" secondAttribute="bottom" constant="30" id="pcm-WC-RcS"/>
                             <constraint firstItem="v1h-VI-XJf" firstAttribute="centerY" secondItem="KAo-9X-8Cz" secondAttribute="centerY" id="rf4-3N-G31"/>
                             <constraint firstItem="WyL-kF-dWF" firstAttribute="leading" secondItem="9Ah-3d-8M0" secondAttribute="trailing" constant="10" id="stQ-Xy-tUg"/>
                             <constraint firstItem="HDm-S9-qem" firstAttribute="centerX" secondItem="Iz3-ua-SXP" secondAttribute="centerX" id="v6i-AQ-NDu"/>
                             <constraint firstItem="v1h-VI-XJf" firstAttribute="leading" secondItem="KAo-9X-8Cz" secondAttribute="trailing" constant="10" id="vwp-2w-Un8"/>
                             <constraint firstItem="KAo-9X-8Cz" firstAttribute="leading" secondItem="Kkx-Nb-oLI" secondAttribute="leading" constant="50" id="w3o-Kd-waG"/>
                             <constraint firstItem="YEc-Ew-Vz8" firstAttribute="centerX" secondItem="Iz3-ua-SXP" secondAttribute="centerX" id="xUg-OD-Lc8"/>
-                            <constraint firstItem="YEc-Ew-Vz8" firstAttribute="top" secondItem="PlG-E0-4PB" secondAttribute="bottom" constant="30" id="xwZ-6U-JzX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kkx-Nb-oLI"/>
                     </view>
