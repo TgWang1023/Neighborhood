@@ -15,6 +15,15 @@ class ShareModel {
         let share = session.dataTask(with: url!, completionHandler: completionHandler)
         share.resume()
     }
+    static func deleteShare(event_id:String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+        if let urlToReq = URL(string: "http://localhost:8000/shares/\(event_id)"){
+            var request = URLRequest(url: urlToReq)
+            request.httpMethod = "DELETE"
+            let session = URLSession.shared
+            let shares = session.dataTask(with: request as URLRequest, completionHandler: completionHandler)
+            shares.resume()
+        }
+    }
     static func getOneShares(shareId: String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
         let url = URL(string: "http://localhost:8000/shares/\(shareId)")
         let session = URLSession.shared

@@ -107,7 +107,8 @@ class EventsVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     func pinOnMap(){
-//        print("mapdata::::", mapData)
+        //        print("mapdata::::", mapData)
+        self.mapView.removeAnnotations(mapView.annotations)
         for i in 0..<mapData.count{
             
             var geocoder = CLGeocoder()
@@ -115,8 +116,8 @@ class EventsVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 placemarks, error in
                 let event = EventAnnotation()
                 let placemark = placemarks?.first
-                let lat = (placemark?.location?.coordinate.latitude)!
-                let lon = (placemark?.location?.coordinate.longitude)!
+                let lat = placemark?.location?.coordinate.latitude
+                let lon = placemark?.location?.coordinate.longitude
                 event.title = self.mapData[i]["name"]! as? String
                 event.eventId = self.mapData[i]["_id"]! as? String
                 let dateFormatter = DateFormatter()
@@ -127,13 +128,13 @@ class EventsVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 let stringDate:String = self.mapData[i]["time"]! as! String
                 print("String Date::::", stringDate)
                 if let date = longDateFormatter.date(from: stringDate){
-                   event.subtitle = "\(dateFormatter.string(from: date))"
+                    event.subtitle = "\(dateFormatter.string(from: date))"
                 } else {
                     print("Something went wrong!")
                 }
                 
-//                event.subtitle = "\(dateFormatter.date(from: date))"
-                event.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                //                event.subtitle = "\(dateFormatter.date(from: date))"
+                event.coordinate = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
                 self.mapView.addAnnotation(event)
             }
             // print("pinMaps - \(parkingLots[i]["address"]! as! String)")
@@ -199,6 +200,7 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource{
                     print("something went wrong")
                 }
             })
+            self.fetchMapData()
             self.tableData.remove(at: indexPath.row)
             tableView.reloadData()
         }
