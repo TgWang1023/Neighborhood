@@ -11,6 +11,7 @@ import CoreLocation
 
 class RegisterViewController: UIViewController {
 
+    var gradientLayer: CAGradientLayer!
     let geocoder = CLGeocoder()
     var locationManager: CLLocationManager!
     let manager = CLLocationManager()
@@ -80,6 +81,20 @@ class RegisterViewController: UIViewController {
         registrationErrorLabel.isHidden = true
         super.viewDidLoad()
         manager.delegate = self as? CLLocationManagerDelegate
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createGradientLayer()
+    }
+    
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.frame
+        gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+        gradientLayer.colors = [UIColor(hue: 0.1167, saturation: 0.92, brightness: 0.97, alpha: 1.0).cgColor, UIColor(hue: 0.1, saturation: 0.92, brightness: 0.81, alpha: 1.0).cgColor]
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
 }
