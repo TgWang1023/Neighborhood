@@ -15,6 +15,12 @@ class ShareModel {
         let share = session.dataTask(with: url!, completionHandler: completionHandler)
         share.resume()
     }
+    static func getOneShares(shareId: String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+        let url = URL(string: "http://localhost:8000/shares/\(shareId)")
+        let session = URLSession.shared
+        let share = session.dataTask(with: url!, completionHandler: completionHandler)
+        share.resume()
+    }
     static func getUserPosts(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
         let url = URL(string: "http://localhost:8000/shares/lending/\(LoggedInUser.shared.id)")
         let session = URLSession.shared

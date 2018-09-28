@@ -911,6 +911,7 @@
                         <outlet property="descriptionLabel" destination="kH1-rt-PcP" id="4NB-0e-sVF"/>
                         <outlet property="isLendingLabel" destination="Ron-lB-YOt" id="fNi-EE-BTD"/>
                         <outlet property="itemLabel" destination="nsa-jd-DhH" id="d6Y-0Q-lQT"/>
+                        <outlet property="sendNotificationButton" destination="znV-r6-RtR" id="g68-jO-JBg"/>
                         <outlet property="userLabel" destination="6UW-5d-QkP" id="sgk-qo-I46"/>
                     </connections>
                 </viewController>
