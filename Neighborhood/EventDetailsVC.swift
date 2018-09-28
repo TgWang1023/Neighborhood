@@ -17,6 +17,7 @@ class EventDetailsVC: UIViewController {
     @IBOutlet weak var eventLocationLabel: UILabel!
     @IBOutlet weak var eventTimeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+  
     @IBAction func cancelPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

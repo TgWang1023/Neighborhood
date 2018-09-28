@@ -10,13 +10,13 @@ import Foundation
 
 class ShareModel {
     static func getAllShares(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        let url = URL(string: "http://localhost:8000/shares")
+        let url = URL(string: "http://13.56.81.225/shares")
         let session = URLSession.shared
         let share = session.dataTask(with: url!, completionHandler: completionHandler)
         share.resume()
     }
     static func deleteShare(event_id:String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://localhost:8000/shares/\(event_id)"){
+        if let urlToReq = URL(string: "http://13.56.81.225/shares/\(event_id)"){
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "DELETE"
             let session = URLSession.shared
@@ -25,25 +25,25 @@ class ShareModel {
         }
     }
     static func getOneShares(shareId: String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        let url = URL(string: "http://localhost:8000/shares/\(shareId)")
+        let url = URL(string: "http://13.56.81.225/shares/\(shareId)")
         let session = URLSession.shared
         let share = session.dataTask(with: url!, completionHandler: completionHandler)
         share.resume()
     }
     static func getUserPosts(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        let url = URL(string: "http://localhost:8000/shares/lending/\(LoggedInUser.shared.id)")
+        let url = URL(string: "http://13.56.81.225/shares/lending/\(LoggedInUser.shared.id)")
         let session = URLSession.shared
         let posts = session.dataTask(with: url!, completionHandler: completionHandler)
         posts.resume()
     }
     static func getUserRequests(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        let url = URL(string: "http://localhost:8000/shares/borrowing/\(LoggedInUser.shared.id)")
+        let url = URL(string: "http://13.56.81.225/shares/borrowing/\(LoggedInUser.shared.id)")
         let session = URLSession.shared
         let requests = session.dataTask(with: url!, completionHandler: completionHandler)
         requests.resume()
     }
     static func sendResponse(shareId: String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://localhost:8000/shares/notify/\(shareId)") {
+        if let urlToReq = URL(string: "http://13.56.81.225/shares/notify/\(shareId)") {
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "POST"
             let bodyData = ["responder" : LoggedInUser.shared.id]
@@ -61,7 +61,7 @@ class ShareModel {
         }
     }
     static func addNewShare(newShare: [String:Any], completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        if let urlToReq = URL(string: "http://localhost:8000/shares") {
+        if let urlToReq = URL(string: "http://13.56.81.225/shares") {
             var request = URLRequest(url: urlToReq)
             request.httpMethod = "POST"
             if (newShare["lender"] as! String).count == 0 {
